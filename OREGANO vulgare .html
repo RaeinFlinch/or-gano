@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Fascinante Universo del Orégano: Una Enciclopedia Viva</title>
+    <meta name="description" content="Explora el orégano en profundidad: desde su rica historia y botánica detallada hasta su cultivo sostenible, química bioactiva, usos culinarios globales, propiedades medicinales avanzadas y su impacto económico. Incluye multimedia y un juego interactivo de crecimiento.">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Origanum_vulgare_001.JPG/800px-Origanum_vulgare_001.JPG" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Variables CSS para colores y tipografía */
+        :root {
+            --primary-color: #4CAF50; /* Verde Orégano */
+            --secondary-color: #388E3C; /* Verde Oscuro Orégano */
+            --accent-color: #FFC107; /* Amarillo suave para acentos */
+            --text-color: #333;
+            --light-bg: #f8f8f8;
+            --dark-bg: #2C3E50; /* Azul oscuro para un contraste elegante */
+            --section-padding: 40px;
+            --border-radius: 12px;
+            --shadow-light: 0 5px 20px rgba(0,0,0,0.08);
+            --shadow-medium: 0 8px 30px rgba(0,0,0,0.15);
+            --shadow-heavy: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Estilos Generales y Reset Básico */
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.8;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        /* Contenedor Principal */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 25px auto;
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        /* Header (Encabezado Principal) */
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+            box-shadow: var(--shadow-medium);
+            position: relative;
+            overflow: hidden;
+        }
+        header::before { /* Elemento para animación sutil de fondo */
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255,255,255,0.07);
+            transform: rotate(45deg);
+            animation: pulseBg 12s infinite alternate ease-in-out;
+            z-index: 0;
+        }
+        @keyframes pulseBg {
+            from { transform: rotate(45deg) scale(1); opacity: 0.07; }
+            to { transform: rotate(48deg) scale(1.05); opacity: 0.1; }
+        }
+        header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4em;
+            margin-bottom: 0.8rem;
+            text-shadow: 2px 3px 5px rgba(0,0,0,0.4);
+            position: relative;
+            z-index: 1;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-size: 1.4em;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+            opacity: 0.9;
+        }
+
+        /* Navegación Principal */
+        nav {
+            background-color: var(--dark-bg);
+            padding: 1rem 0;
+            text-align: center;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            position: sticky; /* Make it sticky */
+            top: 0;
+            width: 100%;
+        }
+        nav.sticky {
+            border-bottom: 4px solid var(--primary-color);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 1rem 1.8rem;
+            display: inline-block;
+            transition: background-color 0.3s ease, transform 0.2s ease, border-bottom 0.3s ease;
+            font-weight: 500;
+            letter-spacing: 0.8px;
+            font-size: 1.05em;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--accent-color);
+            transition: width 0.3s ease-in-out;
+        }
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+        nav a:hover, nav a.active {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            border-radius: 5px;
+        }
+        /* Estilos responsivos para la navegación */
+        @media (max-width: 992px) {
+            nav a {
+                padding: 0.8rem 1.2rem;
+                font-size: 0.95em;
+            }
+        }
+        @media (max-width: 768px) {
+            nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            nav a {
+                padding: 0.7rem 1rem;
+                font-size: 0.9em;
+                flex-basis: 30%; /* Three columns */
+                margin: 5px 1%;
+            }
+        }
+        @media (max-width: 480px) {
+            nav a {
+                flex-basis: 48%; /* Two columns */
+                margin: 5px 1%;
+            }
+        }
+
+        /* Secciones de Contenido */
+        section {
+            padding: var(--section-padding);
+            border-bottom: 1px solid #e5e5e5;
+            opacity: 0; /* Oculto por defecto para animación */
+            transform: translateY(30px); /* Ligeramente hacia abajo */
+            transition: opacity 1s ease-out, transform 1s ease-out;
+            background-color: white;
+            position: relative; /* For parallax background if desired */
+        }
+        section.visible { /* Clase JS para activar la animación */
+            opacity: 1;
+            transform: translateY(0);
+        }
+        section:last-of-type { /* Use last-of-type for the very last section */
+            border-bottom: none;
+        }
+
+        /* Títulos de Sección */
+        h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--secondary-color);
+            padding-bottom: 10px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-weight: 700;
+            position: relative;
+        }
+        h2 {
+            font-size: 2.8em;
+            border-bottom: 3px solid var(--primary-color);
+            color: #2F80ED; /* Un azul más vibrante para H2s */
+            text-align: center;
+            margin-bottom: 40px;
+            padding-top: 10px;
+        }
+        h3 {
+            font-size: 2.2em;
+            color: #555;
+            border-bottom: 1px dashed #c2e0c6;
+            padding-left: 10px;
+        }
+        h4 {
+            font-size: 1.6em;
+            color: #666;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            padding-left: 15px;
+            border-left: 4px solid var(--accent-color);
+        }
+
+        /* Párrafos */
+        p {
+            margin-bottom: 1.2em;
+            text-align: justify;
+        }
+
+        /* Imágenes */
+        .image-wrapper {
+            margin: 30px auto;
+            width: 100%;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-light);
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .image-wrapper img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+        .image-wrapper img:hover {
+            transform: scale(1.03);
+            box-shadow: var(--shadow-medium);
+        }
+        .img-caption {
+            text-align: center;
+            font-style: italic;
+            color: #777;
+            margin-top: 15px;
+            font-size: 0.9em;
+            line-height: 1.4;
+            padding: 0 10px;
+        }
+
+        /* Listas */
+        ul, ol {
+            margin-left: 30px;
+            padding-left: 0;
+            list-style-position: inside; /* Puts bullets inside padding */
+        }
+        li {
+            margin-bottom: 12px;
+            line-height: 1.6;
+            padding-left: 8px;
+        }
+        ul li::marker {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        ol li::marker {
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        /* Enlaces */
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s ease, text-decoration 0.3s ease, font-weight 0.2s ease;
+        }
+        a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+            font-weight: 500;
+        }
+
+        /* Contenedor de Video Responsive */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            margin: 40px 0;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-medium);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* Citas / Destacados */
+        blockquote {
+            background-color: #e6ffe6; /* Fondo verde claro */
+            border-left: 6px solid var(--primary-color);
+            padding: 20px 25px;
+            margin: 30px 0;
+            font-style: italic;
+            color: #555;
+            border-radius: var(--border-radius);
+            font-size: 1.1em;
+            line-height: 1.6;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.05);
+        }
+        blockquote p {
+            margin: 0;
+        }
+
+        /* Notas Importantes */
+        .important-note {
+            background-color: #fff3cd; /* Amarillo suave */
+            border-left: 5px solid #ffc107;
+            padding: 15px 20px;
+            margin: 30px 0;
+            border-radius: 8px;
+            color: #665500;
+            font-weight: bold;
+            font-size: 0.95em;
+        }
+
+        /* Contenedor de Artículo (para subsecciones anidadas) */
+        .article-content {
+            padding: 0 20px;
+            margin-top: 20px;
+        }
+        .article-content > h3:first-child {
+            margin-top: 0; /* Remove top margin for first h3 in article-content */
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px;
+            margin-top: 50px;
+            background-color: var(--dark-bg);
+            color: white;
+            font-size: 0.95em;
+            border-top: 6px solid var(--primary-color);
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
+        }
+        footer a {
+            color: var(--accent-color);
+            font-weight: 600;
+            margin: 0 5px;
+        }
+        footer a:hover {
+            color: white;
+        }
+
+        /* Botón de volver arriba */
+        #backToTop {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 30px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button at the right side */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: var(--primary-color); /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px 20px; /* Some padding */
+            border-radius: 50%; /* Rounded corners */
+            font-size: 1.5em; /* Increase font size */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+        }
+        #backToTop:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px) scale(1.05);
+        }
+
+        /* --- Juego de Crecimiento del Orégano --- */
+        #oregano-game {
+            background-color: #f0fff0;
+            border: 2px dashed var(--primary-color);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin: 40px auto;
+            text-align: center;
+            box-shadow: var(--shadow-light);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        #game-area {
+            margin-top: 25px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #plant-display {
+            width: 180px; /* Tamaño base para el GIF */
+            height: 180px; /* Tamaño base para el GIF */
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            transition: transform 0.8s ease-out; /* Mantenemos la transición para efectos adicionales si se desean */
+            margin-bottom: 20px;
+            /* Aquí cargamos el GIF animado */
+            background-image: url('oregano-animado.gif'); /* ¡Asegúrate de que este archivo exista en tu carpeta! */
+        }
+        /* Eliminamos las clases stage-0 a stage-4 ya que el GIF maneja la animación */
+
+        .game-controls button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            margin: 0 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+        .game-controls button:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 12px rgba(0,0,0,0.2);
+        }
+        .game-controls button:active {
+            transform: translateY(0);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+        }
+        #game-message {
+            margin-top: 20px;
+            font-weight: bold;
+            color: var(--secondary-color);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>El Fascinante Universo del Orégano</h1>
+        <p>Una Enciclopedia Viva: Historia, Ciencia, Cultivo y Sabores del Tesoro Mediterráneo</p>
+    </header>
+
+    <nav id="mainNav">
+        <a href="#introduccion">Introducción</a>
+        <a href="#historia-mito">Historia y Mito</a>
+        <a href="#caracteristicas">Botánica y Variedades</a>
+        <a href="#cultivo">Cultivo Sostenible</a>
+        <a href="#componentes">Química Bioactiva</a>
+        <a href="#usos-culinarios">Maestría Culinaria</a>
+        <a href="#propiedades-medicinales">Salud y Bienestar</a>
+        <a href="#economia-sostenibilidad">Economía y Sostenibilidad</a>
+        <a href="#juego">Juego: Mi Orégano</a>
+        <a href="#galeria">Galería Multimedia</a>
+        <a href="#recursos">Recursos</a>
+    </nav>
+
+    <div class="container">
+        <section id="introduccion">
+            <h2>Introducción al Orégano: El Oro Verde de la Naturaleza</h2>
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Origanum_vulgare_001.JPG/1920px-Origanum_vulgare_001.JPG" alt="Planta de Orégano Floreciendo al Sol en un Campo Mediterráneo" loading="lazy">
+                <p class="img-caption">Una exuberante planta de Orégano (<em>Origanum vulgare</em>) bañada por el sol mediterráneo, susurrando historias de sabor y bienestar. (Imagen sugerida: Campo de orégano floreciendo bajo un cielo azul)</p>
+            </div>
+            <p>El **orégano** (científicamente conocido como <em>Origanum vulgare</em>, de la venerable familia Lamiaceae) es mucho más que una simple especia en tu especiero; es una hierba aromática perenne con una herencia histórica y propiedades extraordinarias. Su nombre, derivado del griego antiguo "oros ganos" (alegría de la montaña), evoca la imagen de esta robusta planta prosperando en las laderas soleadas del Mediterráneo, donde su fragancia inconfundible se mezcla con la brisa marina.</p>
+            <p>Desde los anales de las civilizaciones antiguas —egipcios, griegos y romanos— que lo empleaban en rituales sagrados, como panacea medicinal y en banquetes suntuosos, hasta su omnipresencia en las cocinas contemporáneas a nivel global, el orégano ha mantenido su estatus de ingrediente indispensable. Su **sabor robusto, cálido, ligeramente picante y con toques amaderados** lo convierte en el alma y el corazón de innumerables creaciones culinarias, mientras que su compleja composición fitoquímica lo posiciona como un poderoso y versátil aliado para la salud humana.</p>
+            <p>En esta **guía exhaustiva y multifacética**, nos embarcaremos en un viaje de descubrimiento para desentrañar los secretos más profundos de esta fascinante hierba. Exploraremos su intrincada botánica y la diversidad de sus variedades, las técnicas más efectivas para cultivarlo con éxito en tu propio hogar o jardín, la vasta gama de compuestos activos que le confieren sus prodigiosas propiedades, sus extensos y variados usos culinarios a través de distintas culturas, y, lo más crucial, los **beneficios para la salud rigurosamente respaldados por la ciencia** que lo elevan a la categoría de un verdadero tesoro natural. Prepárate para sumergirte en el universo verde y aromático del orégano.</p>
+            <blockquote>"El orégano es un suspiro del Mediterráneo que aporta vida y sabor a todo lo que toca." - Helena P. (Botánica culinaria)</blockquote>
+        </section>
+
+        <section id="historia-mito">
+            <h2>Historia y Mitología del Orégano: Una Hierba con Legado</h2>
+            <p>La historia del orégano está tejida con los hilos de la civilización misma, presente en mitos, rituales y prácticas ancestrales que trascienden fronteras y épocas.</p>
+
+            <div class="article-content">
+                <h3>Orígenes Antiguos: Del Olimpo a la Medicina</h3>
+                <ul>
+                    <li><strong>Grecia Antigua:</strong> Los griegos creían que el orégano fue creado por la diosa Afrodita, quien lo plantó en su jardín en el Monte Olimpo para simbolizar la alegría y el amor. Era común ver ramos de orégano en bodas, como augurio de felicidad conyugal. Hipócrates, el "Padre de la Medicina", ya lo prescribía como antiséptico y para dolencias estomacales y respiratorias.</li>
+                    <li><strong>Roma Imperial:</strong> Los romanos adoptaron el orégano de los griegos, lo llamaron "herba salubris" (hierba saludable) y lo utilizaron extensivamente en su cocina para condimentar carnes, salsas y vinos. También lo valoraban por sus propiedades medicinales y cosméticas.</li>
+                    <li><strong>Egipto y el Cercano Oriente:</strong> Se han encontrado registros de su uso como hierba medicinal y especia en el antiguo Egipto y en civilizaciones mesopotámicas, donde era parte de mezclas para embalsamar y para tratar diversas afecciones.</li>
+                </ul>
+            </div>
+
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Ancient_Greek_vase_painting_of_a_wedding_procession.jpg/1280px-Ancient_Greek_vase_painting_of_a_wedding_procession.jpg" alt="Antigua pintura griega de una procesión nupcial con posible referencia a hierbas" loading="lazy">
+                <p class="img-caption">Representación artística de una boda griega antigua, donde se utilizaban ramos de orégano como símbolo de alegría y amor. (Imagen sugerida: Arte clásico griego/romano)</p>
+            </div>
+
+            <div class="article-content">
+                <h3>El Orégano a Través de las Eras:</h3>
+                <ul>
+                    <li><strong>Edad Media:</strong> En la Europa medieval, el orégano era cultivado en monasterios por sus propiedades medicinales y su capacidad para repeler insectos. Se usaba en pociones para protegerse del mal y como conservante de alimentos.</li>
+                    <li><strong>Expansión Global:</strong> Con la llegada de los exploradores europeos a América, el orégano (particularmente la variedad mexicana) encontró un nuevo hogar, integrándose profundamente en las cocinas nativas. La globalización moderna ha solidificado su presencia en casi todas las culturas culinarias.</li>
+                    <li><strong>Renacimiento y Tiempos Modernos:</strong> Botánicos y herbolarios del Renacimiento continuaron documentando sus propiedades. Su popularidad en Occidente se disparó en el siglo XX, especialmente después de la Segunda Guerra Mundial, cuando los soldados estadounidenses regresaron de Italia con un aprecio recién descubierto por la "hierba de la pizza".</li>
+                </ul>
+            </div>
+            <p>La rica tapicería de la historia del orégano subraya su valor perenne, no solo como un condimento, sino como un elemento integral en la medicina, la cultura y la vida diaria de la humanidad.</p>
+        </section>
+
+        <section id="caracteristicas">
+            <h2>Características Botánicas y Diversidad Genética</h2>
+            <p>El orégano es un miembro distinguido de la familia Lamiaceae (la familia de la menta), conocido por su resistencia, adaptabilidad y una sorprendente diversidad genética que influye directamente en su perfil aromático y medicinal.</p>
+
+            <div class="article-content">
+                <h3>Morfología Detallada de la Planta:</h3>
+                <ul>
+                    <li><strong>Hojas:</strong> Pequeñas (1-4 cm de largo), ovales u ovadas, con un ápice puntiagudo y márgenes enteros o ligeramente dentados. Su color varía de un vibrante verde oscuro a tonos grisáceos, y a menudo presentan un suave vello que les da una textura aterciopelada y contribuye a la retención de los aceites esenciales. Las glándulas secretoras de estos aceites son claramente visibles bajo aumento.</li>
+                    <li><strong>Tallos:</strong> Herbáceos en su parte superior, lignificados en la base, cuadrados y ramificados, pudiendo alcanzar entre 30 y 90 cm de altura. Su color puede oscilar desde un verde claro hasta tonos rojizos o púrpuras, intensificándose bajo exposición solar directa.</li>
+                    <li><strong>Flores:</strong> Minúsculas (3-4 mm), tubulares, agrupadas en densas espigas terminales o panículas. Sus colores varían de blanco puro a rosa pálido, lavanda y púrpura intenso. Son hermafroditas y atraen a una diversidad de polinizadores, como abejas y mariposas, durante su floración que suele ocurrir de mediados de verano a principios de otoño.</li>
+                    <li><strong>Sistema Radicular:</strong> Fibroso y rizomatoso, lo que permite a la planta establecerse firmemente, extenderse lateralmente y rebrotar con facilidad año tras año, incluso después de periodos de sequía o frío moderado.</li>
+                </ul>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Origanum_vulgare_flower.jpg/1280px-Origanum_vulgare_flower.jpg" alt="Primer plano de flores y hojas de orégano" loading="lazy">
+                <p class="img-caption">Las diminutas y delicadas flores del orégano, en tonos púrpuras y rosados, no solo son un deleite visual sino también vitales para el ecosistema. (Imagen sugerida: Primer plano de flores de orégano)</p>
+            </div>
+
+            <div class="article-content">
+                <h3>Principales Especies y Variedades de Orégano (Un Mundo de Matices):</h3>
+                <p>Lo que comúnmente llamamos "orégano" engloba un género diverso, y la elección de la variedad es crucial para el perfil de sabor deseado:</p>
+                <ol>
+                    <li><strong>Orégano Común o Europeo (<em>Origanum vulgare</em>):</strong> Esta es la especie más cosmopolita y la base de la mayoría de los oréganos secos comerciales. Su sabor es robusto, terroso, cálido y ligeramente amaderado. Es muy adaptable a diferentes climas.</li>
+                    <li><strong>Orégano Griego (<em>Origanum vulgare subsp. hirtum</em>):</strong> A menudo considerado el "estándar de oro" culinario, especialmente en la cocina mediterránea. Se distingue por su aroma y sabor excepcionalmente intensos, a menudo con un toque más picante (debido a mayores concentraciones de carvacrol y timol) y sus hojas más densamente velludas.</li>
+                    <li><strong>Orégano Mexicano (<em>Lippia graveolens</em>):</strong> Botánicamente es un género distinto, pero su perfil de sabor es similar al orégano común, aunque con matices únicos: notas cítricas, de anís o regaliz, y un pronunciado carácter terroso. Es absolutamente indispensable en la auténtica cocina mexicana.</li>
+                    <li><strong>Mejorana (<em>Origanum majorana</em>):</strong> Aunque botánicamente es una especie muy cercana a <em>Origanum vulgare</em>, la mejorana ofrece un sabor notablemente más suave, dulce, floral y menos pungente o "picante". A menudo se confunden, pero culinariamente son distintas.</li>
+                    <li><strong>Orégano Sirio o Za'atar (<em>Origanum syriacum</em>):</strong> Ampliamente cultivado y apreciado en la cocina del Medio Oriente. Es la base de la mezcla de especias Za'atar y tiene un aroma y sabor muy pronunciados y complejos.</li>
+                    <li><strong>Orégano Italiano (<em>Origanum x majoricum</em>):</strong> Un híbrido natural entre orégano común y mejorana, ofreciendo un sabor intermedio: más suave que el orégano griego pero más robusto que la mejorana.</li>
+                </ol>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/be/Origanum_vulgare_dried_leaves.jpg/1280px-Origanum_vulgare_dried_leaves.jpg" alt="Hojas de Orégano Secas y Molidas con textura rugosa" loading="lazy">
+                <p class="img-caption">El orégano seco es la forma más concentrada y potente de esta hierba, liberando su complejo aroma al ser ligeramente triturado o calentado. (Imagen sugerida: Orégano seco y molido en un cuenco)</p>
+            </div>
+        </section>
+
+        <section id="cultivo">
+            <h2>Guía de Cultivo Sostenible: Crea tu Propio Oasis de Orégano</h2>
+            <p>Cultivar orégano es un placer simple, profundamente gratificante y un paso hacia la autosuficiencia culinaria. Es una planta notoriamente resistente que, con los cuidados adecuados y un enfoque sostenible, te proporcionará una cosecha abundante de hojas frescas durante la mayor parte del año.</p>
+
+            <div class="article-content">
+                <h3>1. Condiciones Climáticas y del Suelo Ideales:</h3>
+                <ul>
+                    <li><strong>Exposición Solar:</strong> El orégano es un heliáfilo (amante del sol). Requiere un mínimo de **6 a 8 horas de luz solar directa al día** para maximizar la producción de sus preciados aceites esenciales, los cuales son responsables de su sabor, aroma y propiedades medicinales. La sombra excesiva resultará en un follaje más débil y menos aromático.</li>
+                    <li><strong>Tipo de Suelo:</strong> La clave es el **drenaje excelente**. El orégano prospera en suelos bien drenados, incluso aquellos que son arenosos, pedregosos o con baja a moderada materia orgánica. Evita los suelos pesados y arcillosos que retienen demasiada humedad, ya que esto puede llevar a la pudrición de la raíz. Un pH del suelo ligeramente ácido a ligeramente alcalino (entre 6.0 y 8.0) es ideal.</li>
+                    <li><strong>Riego:</strong> Es una planta **tolerante a la sequía** una vez que está bien establecida. Riégala moderadamente, permitiendo que la parte superior del suelo (aproximadamente 2-3 cm) se seque completamente entre riegos. El encharcamiento es el enemigo número uno del orégano, causando rápidamente problemas fúngicos y pudrición.</li>
+                    <li><strong>Temperatura y Rusticidad:</strong> Es una perenne robusta en climas templados (zonas de rusticidad USDA 5-10). En regiones con inviernos severos, el orégano puede comportarse como una anual o requerir protección (acolchado pesado, traslado a interiores si está en maceta).</li>
+                </ul>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Origanum_vulgare_in_pot.jpg/1280px-Origanum_vulgare_in_pot.jpg" alt="Orégano creciendo vigorosamente en una maceta soleada" loading="lazy">
+                <p class="img-caption">El orégano se adapta maravillosamente al cultivo en macetas, ideal para patios, balcones o incluso alféizares soleados, manteniéndolo siempre a mano para tus creaciones culinarias. (Imagen sugerida: Maceta de orégano en un balcón)</p>
+            </div>
+
+            <div class="article-content">
+                <h3>2. Métodos de Propagación (Multiplicando la Abundancia):</h3>
+                <p>Inicia tu propio cultivo de orégano con diversas técnicas:</p>
+                <ol>
+                    <li><strong>Por Semillas:</strong>
+                        <ul>
+                            <li>Las semillas de orégano son diminutas. Siémbralas superficialmente en bandejas de semillero o macetas pequeñas, aproximadamente de 6 a 8 semanas antes de la fecha de la última helada esperada si planeas trasplantar al aire libre.</li>
+                            <li>Mantén el sustrato consistentemente húmedo con un **rocío suave**, no un chorro directo que pueda mover las semillas. La germinación puede ser lenta (7-21 días) y algo irregular.</li>
+                            <li>Una vez que las plántulas tengan unos pocos centímetros de altura y un par de hojas verdaderas, puedes trasplantarlas a macetas individuales más grandes o directamente al jardín, asegurándote de que el riesgo de heladas haya pasado.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Por Esquejes:</strong>
+                        <ul>
+                            <li>Este es un método rápido y efectivo. Toma esquejes de tallos sanos de aproximadamente 10-15 cm de largo. Retira las hojas de la parte inferior para exponer los nudos.</li>
+                            <li>Puedes enraizarlos en agua (cambiando el agua cada pocos días) o directamente en un sustrato ligero y húmedo. Mantén los esquejes en un lugar cálido y con luz indirecta. Las raíces deberían aparecer en 2-4 semanas.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Por División de Plantas Maduras:</strong>
+                        <ul>
+                            <li>La división es ideal para revitalizar plantas viejas y para obtener nuevas plantas idénticas a la madre. En primavera u otoño, desentierra con cuidado una planta madura de orégano.</li>
+                            <li>Divide el cepellón en secciones, asegurándote de que cada sección tenga raíces sanas y algunos brotes. Vuelve a plantar las secciones de inmediato.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+            <div class="important-note">
+                <strong>Consejo de Sostenibilidad:</strong> La propagación por esquejes o división minimiza la necesidad de comprar nuevas plantas y es una excelente manera de compartir el orégano con amigos y familiares.
+            </div>
+
+            <div class="article-content">
+                <h3>3. Mantenimiento y Cuidado (El Arte de la Poda):</h3>
+                <ul>
+                    <li><strong>Poda Regular:</strong> La poda es esencial para un orégano vigoroso y productivo.
+                        <ul>
+                            <li><strong>Poda de Mantenimiento:</strong> Pellizca las puntas de los tallos regularmente, especialmente antes de que la planta florezca. Esto fomenta un crecimiento más arbustivo y denso, y retrasa la floración, lo que mantiene las hojas más aromáticas. Una vez que la planta florece, su energía se dirige a la producción de semillas, y el sabor de las hojas puede volverse más suave.</li>
+                            <li><strong>Poda Severa (Rejuvenecimiento):</strong> Después de la floración o si la planta se vuelve leñosa y rala, puedes realizar una poda más drástica, cortando los tallos a unos 5-10 cm del suelo. Esto estimulará un nuevo crecimiento fresco.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Fertilización:</strong> El orégano no requiere mucha fertilización. Un compost orgánico ligero o un fertilizante balanceado de liberación lenta una vez al año en primavera suele ser suficiente. El exceso de nutrientes puede reducir la concentración de aceites esenciales y diluir el sabor.</li>
+                    <li><strong>Control de Plagas y Enfermedades:</strong> El orégano es bastante resistente a plagas y enfermedades. Los problemas suelen surgir por exceso de riego (pudrición de raíz, hongos). Si observas pulgones, puedes rociar con agua jabonosa. Mantener un buen flujo de aire alrededor de las plantas también ayuda a prevenir enfermedades.</li>
+                </ul>
+            </div>
+
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Origanum_vulgare_001.JPG/1920px-Origanum_vulgare_001.JPG" alt="Campo de orégano cultivado orgánicamente bajo el sol" loading="lazy">
+                <p class="img-caption">Un campo de orégano bien cuidado, que demuestra el éxito de las prácticas de cultivo sostenibles para una cosecha abundante y de alta calidad. (Imagen sugerida: Orégano en un huerto orgánico)</p>
+            </div>
+
+            <div class="article-content">
+                <h3>4. Cosecha y Almacenamiento (Preservando el Aroma):</h3>
+                <ul>
+                    <li><strong>Momento de la Cosecha:</strong> Cosecha las hojas cuando la planta esté bien establecida y antes de que florezca para obtener el sabor más intenso. Las mañanas soleadas, después de que el rocío se haya evaporado, son el mejor momento, ya que los aceites esenciales están en su punto máximo.</li>
+                    <li><strong>Método de Cosecha:</strong> Corta los tallos con tijeras limpias, dejando al menos un tercio de la planta intacta para permitir que siga creciendo. Puedes cosechar hasta tres veces en una temporada de crecimiento.</li>
+                    <li><strong>Almacenamiento:</strong>
+                        <ul>
+                            <li><strong>Fresco:</strong> Guarda los tallos frescos en el refrigerador, envueltos en una toalla de papel húmeda dentro de una bolsa de plástico, por hasta una semana.</li>
+                            <li><strong>Seco:</strong> Para secar, ata pequeños manojos de tallos y cuélgalos boca abajo en un lugar cálido, oscuro y bien ventilado. Una vez secos (cuando las hojas se desmenuzan fácilmente), retira las hojas de los tallos y guárdalas enteras o ligeramente trituradas en un recipiente hermético, lejos de la luz y el calor. El orégano seco es a menudo más potente que el fresco.</li>
+                            <li><strong>Congelado:</strong> Pica las hojas frescas y congélalas en bandejas de cubitos de hielo con un poco de agua o aceite de oliva. Una vez congelados, transfiérelos a una bolsa para congelar.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <p>Con esta guía, transformarás tu jardín o balcón en un próspero rincón de orégano, listo para enriquecer tus platos y tu bienestar.</p>
+        </section>
+
+        <section id="componentes">
+            <h2>Química Bioactiva del Orégano: El Poder Oculto de sus Compuestos</h2>
+            <p>El orégano no es solo una delicia culinaria; es una auténtica farmacia natural en miniatura, repleta de compuestos bioactivos que le confieren sus notables propiedades medicinales. La sinergia de estos fitoquímicos es lo que lo convierte en un superalimento y una hierba medicinal de primer orden.</p>
+
+            <div class="article-content">
+                <h3>Aceites Esenciales (La Esencia del Orégano):</h3>
+                <p>El corazón aromático y terapéutico del orégano reside en sus **aceites esenciales volátiles**, extraídos principalmente de las hojas y flores. La composición y concentración de estos compuestos varían según la especie, el clima, el suelo y el momento de la cosecha, pero los más destacados son:</p>
+                <ul>
+                    <li><strong>Carvacrol:</strong> Este es el componente más abundante y biológicamente activo en la mayoría de las variedades de orégano, responsable en gran medida de su sabor picante y sus potentes propiedades.
+                        <ul>
+                            <li>**Acción Antimicrobiana:** Es un formidable agente contra una amplia gama de bacterias (incluyendo <em>E. coli, Salmonella, Staphylococcus aureus</em>), hongos (como la <em>Candida albicans</em>) y virus. Actúa dañando las membranas celulares de los patógenos.</li>
+                            <li>**Acción Antiinflamatoria:** Ayuda a reducir la inflamación al inhibir enzimas y mediadores proinflamatorios.</li>
+                            <li>**Acción Antioxidante:** Contribuye a neutralizar los radicales libres que causan daño celular.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Timol:</strong> Otro fenol potente con una estructura similar al carvacrol.
+                        <ul>
+                            <li>**Acción Antiséptica y Antifúngica:** Refuerza las propiedades antimicrobianas del carvacrol y es particularmente eficaz contra hongos.</li>
+                            <li>**Acción Expectorante:** Tradicionalmente usado para aliviar la tos y la congestión respiratoria.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Ácido Rosmarínico:</strong> Un polifenol con potentes efectos antioxidantes.
+                        <ul>
+                            <li>**Acción Antioxidante:** Es un antioxidante mucho más potente que la vitamina E. Protege las células del daño oxidativo.</li>
+                            <li>**Acción Antiinflamatoria:** Contribuye a la reducción de la inflamación.</li>
+                            <li>**Acción Antiviral:** Se ha investigado su potencial contra ciertos virus.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Terpenos (Pineno, Sabineno, Mirceno):</strong> Aunque en menor concentración, contribuyen al aroma complejo del orégano y poseen propiedades antioxidantes, antiinflamatorias y antisépticas.</li>
+                    <li><strong>Linalool:</strong> Aporta notas florales y tiene propiedades ansiolíticas y sedantes suaves.</li>
+                </ul>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/your_oregano_chemistry_video_id" title="Química del Orégano" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>
+                <p class="img-caption">Video explicativo sobre los principales compuestos bioactivos del orégano y cómo interactúan para generar sus propiedades. (Reemplaza 'your\_oregano\_chemistry\_video\_id' con un ID real de YouTube)</p>
+            </div>
+
+            <div class="article-content">
+                <h3>Flavonoides y Otros Compuestos:</h3>
+                <p>Más allá de los aceites esenciales, el orégano contiene una rica variedad de otros compuestos que complementan su perfil fitoquímico:</p>
+                <ul>
+                    <li><strong>Flavonoides (Apigenina, Luteolina):</strong> Estos antioxidantes vegetales contribuyen a la protección celular, tienen efectos antiinflamatorios y pueden modular la respuesta inmune.</li>
+                    <li><strong>Vitaminas:</strong> Aporta pequeñas cantidades de vitamina K (esencial para la coagulación sanguínea y la salud ósea), vitamina E y vitamina A (en forma de carotenoides, importantes para la visión y la función inmune).</li>
+                    <li><strong>Minerales:</strong> Contiene minerales como hierro (esencial para el transporte de oxígeno), calcio (para huesos y dientes), manganeso (un antioxidante y cofactor enzimático) y fibra.</li>
+                </ul>
+            </div>
+            <p>Es la sinergia de todos estos componentes, actuando en concierto, lo que confiere al orégano su poder integral como aliado culinario y terapéutico, un verdadero ejemplo de la sabiduría de la naturaleza.</p>
+        </section>
+
+        <section id="usos-culinarios">
+            <h2>Maestría Culinaria del Orégano: Sabor Global en Tu Cocina</h2>
+            <p>El orégano es un pilar fundamental en la gastronomía mundial, capaz de transformar un plato sencillo en una experiencia culinaria memorable. Su versatilidad y la riqueza de su perfil de sabor lo hacen indispensable en cocinas de todo el mundo.</p>
+
+            <div class="article-content">
+                <h3>1. Orégano en la Cocina Mediterránea (El Corazón del Sabor):</h3>
+                <p>Es el rey indiscutible de la cocina mediterránea, donde su aroma cálido y terroso se entrelaza con el aceite de oliva, el tomate y el ajo para crear sabores icónicos.</p>
+                <ul>
+                    <li><strong>Italia:</strong> Indispensable en salsas para pasta, pizzas, focaccias y platos de carne como la Saltimbocca. Combina a la perfección con albahaca y tomillo.</li>
+                    <li><strong>Grecia:</strong> Protagonista en ensaladas griegas, adobos para carnes (especialmente cordero y pollo), souvlaki, y en el famoso tzatziki. El orégano griego, más potente, es el preferido aquí.</li>
+                    <li><strong>España:</strong> Usado en marinados, guisos de carne, salsas de tomate y en algunas preparaciones de pescado.</li>
+                    <li><strong>Turquía y Oriente Medio:</strong> Esencial en el Za'atar, una mezcla de especias con sésamo y zumaque. Se utiliza en kebabs, koftas, y sobre panes planos.</li>
+                </ul>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Pizza_margherita_with_oregano.jpg/1280px-Pizza_margherita_with_oregano.jpg" alt="Pizza Margherita con orégano fresco y albahaca" loading="lazy">
+                <p class="img-caption">Una clásica Pizza Margherita, donde el orégano no es solo un adorno, sino un componente esencial que eleva el sabor del tomate y el queso. (Imagen sugerida: Pizza con orégano)</p>
+            </div>
+
+            <div class="article-content">
+                <h3>2. Orégano en la Cocina Americana y Latinoamericana:</h3>
+                <ul>
+                    <li><strong>México:</strong> El Orégano Mexicano (<em>Lippia graveolens</em>) es fundamental en la cocina de este país, con su perfil cítrico y anisado. Imprescindible en chiles, frijoles, moles, barbacoa y pozole.</li>
+                    <li><strong>Estados Unidos:</strong> Ampliamente adoptado, especialmente en la "cocina ítalo-americana" (salsas de espagueti, pizzas), y en mezclas de especias para carnes a la parrilla o asados.</li>
+                    <li><strong>Caribe y Sudamérica:</strong> Presente en adobos para carnes, sopas, estofados y en la sazón de aves y pescados. Cada región puede tener su variedad preferida o combinación única.</li>
+                </ul>
+            </div>
+
+            <div class="important-note">
+                <strong>Consejo del Chef:</strong> El **orégano seco** es a menudo más potente que el fresco, ya que los aceites esenciales se concentran durante el proceso de secado. Si usas orégano fresco, puedes necesitar una cantidad 2 a 3 veces mayor para lograr el mismo impacto de sabor que con el orégano seco. Para el orégano seco, tritúralo ligeramente entre tus palmas antes de añadirlo al plato para liberar sus aromas.
+            </div>
+
+            <div class="article-content">
+                <h3>3. Formas de Incorporar el Orégano en Tus Recetas:</h3>
+                <ul>
+                    <li><strong>Marinadas y Adobos:</strong> Para carnes, aves, pescados y vegetales a la parrilla o asados.</li>
+                    <li><strong>Salsas y Guisos:</strong> Base para salsas de tomate, guisos de legumbres, estofados de carne.</li>
+                    <li><strong>Panes y Masas:</strong> Integrado en la masa de focaccia, pan de ajo, o espolvoreado sobre pizzas y bruschettas.</li>
+                    <li><strong>Ensaladas:</strong> Fresco o seco, realza ensaladas de tomate, pepino, queso feta o mozzarella.</li>
+                    <li><strong>Sopas y Caldos:</strong> Añade profundidad y calidez a sopas de verduras, lentejas o pollo.</li>
+                    <li><strong>Aceites y Vinagres Infusionados:</strong> Crea tus propios condimentos aromáticos macerando orégano en aceite de oliva o vinagre.</li>
+                </ul>
+            </div>
+            <p>Experimenta con las diferentes variedades de orégano para descubrir sus sutiles matices y eleva tus creaciones culinarias a un nuevo nivel.</p>
+        </section>
+
+        <section id="propiedades-medicinales">
+            <h2>Propiedades Medicinales Avanzadas: El Orégano Como Aliado de la Salud</h2>
+            <p>Más allá de su estatus culinario, el orégano ha sido reverenciado durante milenios por sus impresionantes propiedades medicinales, muchas de las cuales están siendo ahora respaldadas por una creciente base de evidencia científica. Sus compuestos bioactivos ofrecen un amplio espectro de beneficios para la salud.</p>
+
+            <div class="article-content">
+                <h3>1. Potente Antimicrobiano y Antifúngico:</h3>
+                <ul>
+                    <li><strong>Combate Bacterias:</strong> El carvacrol y el timol son extremadamente efectivos contra diversas cepas de bacterias, incluyendo algunas resistentes a antibióticos como <em>Staphylococcus aureus</em> (MRSA), <em>E. coli</em> y <em>Salmonella</em>. Actúan dañando la membrana celular bacteriana, lo que conduce a su lisis y muerte.</li>
+                    <li><strong>Acción Antifúngica:</strong> Demuestra una actividad significativa contra hongos y levaduras, especialmente <em>Candida albicans</em>, la causa común de infecciones por levaduras. Se utiliza tanto de forma tópica como interna (bajo supervisión) para estas afecciones.</li>
+                    <li><strong>Antiviral:</strong> Investigaciones preliminares sugieren que el orégano puede tener propiedades antivirales contra ciertos virus, como el norovirus (causa común de gastroenteritis) y algunos virus respiratorios, aunque se necesita más investigación en humanos.</li>
+                </ul>
+            </div>
+            <div class="important-note">
+                <strong>Advertencia:</strong> Si bien los estudios son prometedores, el **aceite esencial de orégano** puro es extremadamente concentrado y debe usarse con gran precaución. Nunca se debe ingerir sin la supervisión de un profesional de la salud cualificado, ya que puede causar irritación severa en mucosas y otros efectos adversos. Para uso interno, las infusiones o la ingesta culinaria son las formas más seguras.
+            </div>
+
+            <div class="article-content">
+                <h3>2. Antiinflamatorio y Antioxidante:</h3>
+                <ul>
+                    <li><strong>Reducción de la Inflamación:</strong> Los compuestos como el carvacrol, el timol y el ácido rosmarínico poseen propiedades antiinflamatorias que pueden ayudar a aliviar condiciones inflamatorias, como las asociadas con la artritis, enfermedades intestinales inflamatorias y dolor muscular. Inhiben la producción de citocinas proinflamatorias.</li>
+                    <li><strong>Protección Celular:</strong> Es una fuente excepcional de antioxidantes que combaten el estrés oxidativo causado por los radicales libres. Este daño celular está implicado en el envejecimiento y el desarrollo de enfermedades crónicas como el cáncer, enfermedades cardíacas y neurodegenerativas. El orégano tiene una de las capacidades antioxidantes más altas entre las hierbas culinarias.</li>
+                </ul>
+            </div>
+
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f6/Oregano_leaves_and_flowers_close-up.jpg/1280px-Oregano_leaves_and_flowers_close-up.jpg" alt="Detalle de hojas y flores de orégano, con enfoque en sus aceites esenciales" loading="lazy">
+                <p class="img-caption">Las diminutas glándulas en las hojas del orégano son fábricas naturales de poderosos compuestos bioactivos que le otorgan sus propiedades medicinales. (Imagen sugerida: Orégano microscópico mostrando glándulas de aceite)</p>
+            </div>
+
+            <div class="article-content">
+                <h3>3. Apoyo Digestivo y Respiratorio:</h3>
+                <ul>
+                    <li><strong>Salud Digestiva:</strong> Tradicionalmente utilizado para aliviar indigestión, gases e hinchazón. Sus propiedades carminativas ayudan a relajar los músculos del tracto digestivo. También puede contribuir a equilibrar la microbiota intestinal, inhibiendo el crecimiento de bacterias dañinas.</li>
+                    <li><strong>Soporte Respiratorio:</strong> Sus propiedades expectorantes y antiespasmódicas lo hacen útil para aliviar la tos, resfriados, gripes y congestión nasal. Se puede usar en infusiones o inhalaciones de vapor.</li>
+                </ul>
+            </div>
+
+            <div class="article-content">
+                <h3>4. Otros Beneficios Potenciales:</h3>
+                <ul>
+                    <li><strong>Anticancerígeno:</strong> Estudios de laboratorio han mostrado que el carvacrol puede inducir la apoptosis (muerte celular programada) en células cancerosas y detener su proliferación, aunque esto está en etapas muy tempranas de investigación.</li>
+                    <li><strong>Salud Cardiovascular:</strong> Algunos componentes pueden ayudar a reducir los niveles de colesterol y tener un efecto protector sobre el corazón.</li>
+                    <li><strong>Gestión de la Diabetes:</strong> Investigaciones preliminares sugieren un potencial para ayudar en el control de los niveles de azúcar en sangre.</li>
+                </ul>
+            </div>
+            <p>El orégano es un testamento de cómo la naturaleza nos provee de potentes aliados para nuestra salud. Sin embargo, es crucial recordar que las hierbas medicinales deben usarse con conocimiento y, en el caso de condiciones médicas serias o el uso de extractos concentrados, siempre bajo la guía de un profesional.</p>
+        </section>
+
+        <section id="economia-sostenibilidad">
+            <h2>Impacto Económico y Sostenibilidad del Orégano</h2>
+            <p>El orégano es una hierba de gran importancia económica a nivel global, con un mercado que abarca desde la industria alimentaria y farmacéutica hasta la cosmética y la aromaterapia. Su cultivo y procesamiento impactan a comunidades en diversas regiones del mundo, y la sostenibilidad es clave para su futuro.</p>
+
+            <div class="article-content">
+                <h3>1. Cadena de Valor del Orégano:</h3>
+                <ul>
+                    <li><strong>Cultivo y Cosecha:</strong> Grandes productores como Turquía, Grecia, México e Italia dominan el mercado. La recolección puede ser manual o mecanizada, dependiendo de la escala. Las prácticas sostenibles de cultivo incluyen la rotación de cultivos, el uso eficiente del agua y la gestión integrada de plagas para reducir la dependencia de agroquímicos.</li>
+                    <li><strong>Procesamiento:</strong> Las hojas de orégano son secadas (al sol o en secadores industriales) y luego trituradas o molidas. El aceite esencial se extrae mediante destilación por arrastre de vapor.</li>
+                    <li><strong>Comercialización:</strong> Se vende como hierba seca (entera o molida), fresca, o como aceite esencial. Los mercados principales incluyen Norteamérica, Europa y Asia, donde la demanda en la industria alimentaria y de suplementos de salud es robusta.</li>
+                </ul>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Market_stall_with_dried_herbs_in_Turkey.jpg/1280px-Market_stall_with_dried_herbs_in_Turkey.jpg" alt="Puesto de mercado con orégano seco y otras hierbas en Turquía" loading="lazy">
+                <p class="img-caption">Mercados vibrantes en Turquía, uno de los mayores productores de orégano, exhiben la abundancia de esta hierba aromática, fundamental para la economía local. (Imagen sugerida: Mercado de especias turco)</p>
+            </div>
+
+            <div class="article-content">
+                <h3>2. Desafíos y Oportunidades de Sostenibilidad:</h3>
+                <ul>
+                    <li><strong>Prácticas Agrícolas:</strong> La monocultura puede agotar el suelo y aumentar la vulnerabilidad a plagas. La promoción de la biodiversidad y los métodos de agricultura orgánica son cruciales.</li>
+                    <li><strong>Uso del Agua:</strong> Aunque es tolerante a la sequía, el riego excesivo en algunas zonas puede agotar los recursos hídricos. Estrategias de riego eficiente son necesarias.</li>
+                    <li><strong>Autenticidad y Adulteración:</strong> El alto valor del orégano, especialmente su aceite esencial, lo hace susceptible a la adulteración con otras plantas o compuestos sintéticos. Esto afecta la confianza del consumidor y el sustento de los productores honestos. Certificaciones y pruebas de laboratorio rigurosas son vitales.</li>
+                    <li><strong>Comercio Justo:</strong> Asegurar precios justos y condiciones laborales dignas para los agricultores, muchos de los cuales son pequeños productores, es fundamental para una cadena de suministro sostenible y ética.</li>
+                    <li><strong>Investigación y Desarrollo:</strong> Continuar investigando variedades de orégano más resistentes, con mayores rendimientos y perfiles de compuestos deseables, contribuirá a la sostenibilidad a largo plazo.</li>
+                </ul>
+            </div>
+            <p>El orégano es un ejemplo de cómo una simple hierba puede tener un impacto global significativo. La conciencia del consumidor y el compromiso con prácticas sostenibles en toda la cadena de valor son esenciales para asegurar que este "oro verde" siga prosperando para las futuras generaciones.</p>
+        </section>
+
+        <section id="juego">
+            <h2>Juego Interactivo: ¡Cultiva tu Propio Orégano Virtual!</h2>
+            <div id="oregano-game">
+                <p>¡Bienvenido a tu jardín virtual de orégano! Haz clic en "Regar" y "Abonar" para ayudar a tu planta a crecer. ¡Cuídala bien y verás cómo florece!</p>
+                <div id="game-area">
+                    <div id="plant-display"></div>
+                    <div class="game-controls">
+                        <button id="waterBtn">Regar</button>
+                        <button id="fertilizeBtn">Abonar</button>
+                    </div>
+                    <p id="game-message">Tu planta de orégano está esperando...</p>
+                </div>
+            </div>
+            <p>¡Experimenta la alegría de la jardinería con este simple juego y aprende lo que tu planta necesita para prosperar!</p>
+        </section>
+
+        <section id="galeria">
+            <h2>Galería Multimedia: El Orégano en Imágenes y Sonidos</h2>
+            <p>Una colección visual y auditiva para apreciar la belleza y versatilidad del orégano.</p>
+
+            <h3>Imágenes Detalladas:</h3>
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Oregano_Seeds.jpg/1280px-Oregano_Seeds.jpg" alt="Semillas de Orégano" loading="lazy">
+                <p class="img-caption">Semillas diminutas pero llenas de potencial: el inicio de una nueva vida de orégano.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Origanum_vulgare_001.JPG/1280px-Origanum_vulgare_001.JPG" alt="Brote de Orégano Joven" loading="lazy">
+                <p class="img-caption">Un brote de orégano joven, mostrando las primeras hojas verdaderas.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Origanum_vulgare_in_pot.jpg/1280px-Origanum_vulgare_in_pot.jpg" alt="Planta de Orégano en Maceta" loading="lazy">
+                <p class="img-caption">Orégano maduro en maceta, listo para la cosecha.</p>
+            </div>
+            <div class="image-wrapper">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Origanum_vulgare_001.JPG/1920px-Origanum_vulgare_001.JPG" alt="Campo de Orégano Floreciendo" loading="lazy">
+                <p class="img-caption">Un campo de orégano en plena floración, un deleite para la vista y el olfato.</p>
+            </div>
+
+            <h3>Audio del Orégano:</h3>
+            <audio controls preload="none">
+                <source src="your_oregano_sound_file.mp3" type="audio/mpeg">
+                <p class="img-caption">Sonido ambiente de un campo de orégano con el zumbido de los polinizadores. (Reemplaza 'your\_oregano\_sound\_file.mp3' con un archivo de audio real)</p>
+                Tu navegador no soporta el elemento de audio.
+            </audio>
+            <p>Escucha el sonido de un campo de orégano en un día soleado, con el zumbido de las abejas trabajando en sus flores. Una pequeña inmersión auditiva en su hábitat natural.</p>
+        </section>
+
+        <section id="recursos">
+            <h2>Recursos Adicionales y Lecturas Recomendadas</h2>
+            <p>Para aquellos que deseen profundizar aún más en el fascinante mundo del orégano, aquí tienen una selección de recursos confiables:</p>
+            <ul>
+                <li><a href="https://es.wikipedia.org/wiki/Origanum_vulgare" target="_blank" rel="noopener noreferrer">Orégano en Wikipedia</a>: Una visión general completa de su botánica, usos y distribución.</li>
+                <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6152731/" target="_blank" rel="noopener noreferrer">Estudio sobre propiedades del orégano (PubMed Central)</a>: Artículo científico sobre los efectos antimicrobianos y antioxidantes.</li>
+                <li><a href="https://www.gardeners.com/how-to/grow-oregano/5101.html" target="_blank" rel="noopener noreferrer">Guía de Cultivo de Orégano (Gardeners.com)</a>: Consejos prácticos para el cultivo en casa.</li>
+                <li>Libro: "The Complete Book of Herbs" by Lesley Bremness - Una obra de referencia para el uso de hierbas.</li>
+                <li>Sociedad Española de Fitoterapia (<a href="https://www.sefit.es/" target="_blank" rel="noopener noreferrer">SEFIT</a>): Información profesional sobre el uso de plantas medicinales.</li>
+            </ul>
+            <p class="important-note">
+                <strong>Nota:</strong> Los enlaces a sitios externos se proporcionan solo como referencia. La información contenida en esta página es para fines educativos y no sustituye el consejo médico profesional.
+            </p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 El Universo del Orégano. Todos los derechos reservados. | Desarrollado con pasión y aroma a orégano.</p>
+        <p>
+            <a href="#">Política de Privacidad</a> |
+            <a href="#">Términos de Uso</a>
+        </p>
+    </footer>
+
+    <button onclick="topFunction()" id="backToTop" title="Volver arriba">&#9650;</button> <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+
+                // Remove 'active' class from all links
+                document.querySelectorAll('nav a').forEach(link => {
+                    link.classList.remove('active');
+                });
+                // Add 'active' class to the clicked link
+                this.classList.add('active');
+            });
+        });
+
+        // Sticky navigation on scroll
+        window.onscroll = function() {stickyNav()};
+
+        var navbar = document.getElementById("mainNav");
+        var sticky = navbar.offsetTop;
+
+        function stickyNav() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+
+        // Back to top button functionality
+        let mybutton = document.getElementById("backToTop");
+
+        window.onscroll = function() {
+            scrollFunction();
+            stickyNav(); // Keep sticky nav active
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        }
+
+        // Intersection Observer for section animations
+        const sections = document.querySelectorAll('section');
+
+        const observerOptions = {
+            root: null, // viewport
+            rootMargin: '0px',
+            threshold: 0.1 // 10% of the section must be visible
+        };
+
+        const sectionObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Optional: stop observing once it's visible if you only want it to animate once
+                    // observer.unobserve(entry.target);
+                } else {
+                    // Optional: remove 'visible' class if you want the animation to reset when scrolling away
+                    // entry.target.classList.remove('visible');
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            sectionObserver.observe(section);
+        });
+
+        // Oregano Game Logic
+        let plantStage = 0;
+        const maxPlantStage = 4; // Total stages: 0 to 4
+        const plantDisplay = document.getElementById('plant-display');
+        const waterBtn = document.getElementById('waterBtn');
+        const fertilizeBtn = document.getElementById('fertilizeBtn');
+        const gameMessage = document.getElementById('game-message');
+
+        // Initial update when the page loads (the GIF will start its loop)
+        // No need for updatePlantDisplay() as the GIF is the background
+        
+        function growPlant() {
+            if (plantStage < maxPlantStage) {
+                plantStage++;
+                // Reset the GIF animation by forcing a reflow
+                plantDisplay.style.display = 'none';
+                void plantDisplay.offsetHeight; // Triggers reflow
+                plantDisplay.style.display = 'block';
+
+                gameMessage.textContent = `¡Tu orégano está creciendo! Ahora está en la etapa ${plantStage + 1}.`;
+            } else {
+                gameMessage.textContent = "¡Tu orégano ha alcanzado su máximo crecimiento y está floreciendo!";
+                waterBtn.disabled = true;
+                fertilizeBtn.disabled = true;
+            }
+        }
+
+        waterBtn.addEventListener('click', () => {
+            gameMessage.textContent = "Has regado tu orégano. ¡Se ve más feliz!";
+            setTimeout(growPlant, 1000); // Crecer después de un corto delay
+        });
+
+        fertilizeBtn.addEventListener('click', () => {
+            gameMessage.textContent = "Has abonado tu orégano. ¡Pronto verás los resultados!";
+            setTimeout(growPlant, 1000); // Crecer después de un corto delay
+        });
+
+    </script>
+</body>
+</html>
